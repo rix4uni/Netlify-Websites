@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Files Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .code-block pre {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Files Code</h1>
+
+<div class="code-block">
+    <h2><a class="js-link" data-file="1.js" href="#">1.js</a></h2>
+    <pre><code>alert(1)</code></pre>
+</div>
+
+<div class="code-block">
+    <h2><a class="js-link" data-file="2.js" href="#">2.js</a></h2>
+    <pre><code>confirm(1)</code></pre>
+</div>
+
+<div class="code-block">
+    <h2><a class="js-link" data-file="3.js" href="#">3.js</a></h2>
+    <pre><code>prompt(1)</code></pre>
+</div>
+
+<div class="code-block">
+    <h2><a class="js-link" data-file="4.js" href="#">4.js</a></h2>
+    <pre><code>alert(document.domain)</code></pre>
+</div>
+
+<div class="code-block">
+    <h2><a class="js-link" data-file="5.js" href="#">5.js</a></h2>
+    <pre><code>confirm(document.domain)</code></pre>
+</div>
+
+<div class="code-block">
+    <h2><a class="js-link" data-file="6.js" href="#">6.js</a></h2>
+    <pre><code>prompt(document.domain)</code></pre>
+</div>
+
+<script>
+    // Get the domain name dynamically
+    var domain = document.domain;
+
+    // Get all links with class 'js-link'
+    var links = document.querySelectorAll('.js-link');
+
+    // Set the href attributes for each link
+    links.forEach(function(link) {
+        var file = link.getAttribute('data-file');
+        link.href = 'https://' + domain + '/' + file;
+    });
+</script>
+
+</body>
+</html>

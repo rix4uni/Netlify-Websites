@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test SVG XSS</title>
+</head>
+<body>
+    <!-- Using the object tag -->
+    <object type="image/svg+xml" data="https://imgp.netlify.app/my-payload.svg"></object>
+
+    <!-- Or using the iframe tag -->
+    <iframe src="https://imgp.netlify.app/my-payload.svg"></iframe>
+</body>
+</html>
